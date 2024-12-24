@@ -7,14 +7,11 @@ Do the following:
    2. Receive the parameters: a and b
    3. Multiply a and b and return the answer
 */
+function multiply(a, b) {
+  return a * b;
+}
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
-  }
-
-
-/*
-
+console.log(multiply(3, 4)); 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: Age in Cat years 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -25,9 +22,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function catYears(/*add your code here*/){
-    /*add your code here*/
+function catYears(humanAge) {
+  return humanAge * 7;
 }
+
+console.log(catYears(5));
 
 
 
@@ -35,33 +34,18 @@ function catYears(/*add your code here*/){
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: Convert to Arrow Function  🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Take the commented ES5 syntax and convert it to ES6 arrow Syntax
-
-
-/*
-
-------------
-function myFunction() {
-console.log("Function was invoked!");
+const myFunction = () => {
+  console.log("Function was invoked!");
 };
-
 myFunction();
-----------------
 
-let anotherFunction = function (param) {
-  return param;
-};
 
-anotherFunction("Example");
 
----------------
+const anotherFunction = param => param;
+console.log(anotherFunction("Example"));
 
-let add = function (param1, param2) {
-  return param1 + param2;
-};
-
-add(1,2);
-
-*/
+const add = (param1, param2) => param1 + param2;
+console.log(add(1, 2)); // Logs: 3
 
 
 
@@ -85,6 +69,18 @@ Use the game function below to do the following:
 
 function game(user, computer){
     /*add your code here*/
+}function game(user, computer) {
+  if (user === computer) {
+      return "it's a tie";
+  }
+  if (
+      (user === "rock" && computer === "scissors") ||
+      (user === "scissors" && computer === "paper") ||
+      (user === "paper" && computer === "rock")
+  ) {
+      return "you win!";
+  }
+  return "you lose!";
 }
 
 
